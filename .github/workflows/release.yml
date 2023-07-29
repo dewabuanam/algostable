@@ -13,6 +13,28 @@ jobs:
       uses: actions/checkout@v2
     - name: Setup .NET SDK
       uses: actions/setup-dotnet@v1
+
+    - name: Extract version from tag
+      id: extract_version
+      run: echo "::set-output name=VERSION::${GITHUB_REF#refs/tags/v}"
+
+    - name: Update version
+      run: |
+        # Get the version from the previous step
+        version=${{ steps.extract_version.outputs.VERSION }}
+
+        # Remove the 'v' character from the beginning of the version
+        version="${version#v}"
+
+        # Update the version in the necessary project files (e.g., .csproj)
+        sed -i "s/<Version>.*<\/Version>/<Version>${version}<\/Version>/" Algostable/Algostable.csproj
+
+        # Commit the changes with the specified commit message
+        git config user.name "Dewa Muharmadin"
+        git config user.email "dewabuanam@gmail.com"
+        git add Algostable/Algostable.csproj
+        git commit -m "chore: update version ${version}"
+
     - name: Build
       run: dotnet build -c Release
     - name: Test
