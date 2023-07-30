@@ -35,6 +35,14 @@ jobs:
         git add Algostable/Algostable.csproj
         git commit -m "chore: update version ${version}"
 
+        # Delete current tag
+        git tag -d "v${version}"
+        git push --delete origin "v${version}"
+
+        # Push the changes to the origin repository
+        git tag -a "v${version}" -m "Version ${version}"
+        git push origin HEAD:${{ github.ref }}
+
     - name: Build
       run: dotnet build -c Release
     - name: Test
