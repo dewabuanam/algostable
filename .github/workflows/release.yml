@@ -34,6 +34,7 @@ jobs:
         git config user.email "dewabuanam@gmail.com"
         git add Algostable/Algostable.csproj
         git commit -m "chore: update version ${version}"
+        git push origin HEAD:main
 
         # Delete current tag
         git tag -d "v${version}"

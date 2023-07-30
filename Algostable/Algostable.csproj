@@ -6,7 +6,7 @@
         <Nullable>enable</Nullable>
         <PackageIcon>nuget.png</PackageIcon>
         <Version>0.0.1</Version>
-        <PackageReadmeFile>..\README.md</PackageReadmeFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -14,10 +14,7 @@
         <Pack>True</Pack>
         <PackagePath></PackagePath>
       </None>
-    </ItemGroup>
-
-    <ItemGroup>
-        <None Include="..\README.md" Pack="true" PackagePath="\"/>
+        <None Include="docs\README.md" Pack="true" PackagePath="\"/>
     </ItemGroup>
 
 </Project>
