@@ -6,6 +6,7 @@
         <Nullable>enable</Nullable>
         <PackageIcon>nuget.png</PackageIcon>
         <Version>0.0.10</Version>
+        <Description>Algostable is an extensive and versatile algorithm collection that serves as a valuable resource for various signal processing tasks. Designed to be an all-encompassing toolkit, Algostable provides a wide array of algorithms to simplify and optimize signal analysis procedures for researchers, engineers, and developers. Key Algorithm : Fast Fourier Transform (FFT) and Peak Detection.</Description>
     </PropertyGroup>
 
     <ItemGroup>
