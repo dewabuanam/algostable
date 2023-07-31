@@ -8,6 +8,12 @@
         <Version>0.0.13</Version>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <Description>Algostable is an extensive and versatile algorithm collection that serves as a valuable resource for various signal processing tasks. Designed to be an all-encompassing toolkit, Algostable provides a wide array of algorithms to simplify and optimize signal analysis procedures for researchers, engineers, and developers. Key Algorithm : Fast Fourier Transform (FFT) and Peak Detection.</Description>
+        <Title>Algostable</Title>
+        <Authors>dewabuanam</Authors>
+        <PackageProjectUrl>https://algostable.apps.dewabuanam.com</PackageProjectUrl>
+        <PackageLicenseUrl>https://www.gnu.org/licenses/gpl-3.0.en.html</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/dewabuanam/algostable</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
     </PropertyGroup>
 
     <ItemGroup>
@@ -15,7 +21,7 @@
             <Pack>True</Pack>
             <PackagePath></PackagePath>
         </None>
-        <None Include="Assets\README.md" Pack="true" PackagePath="\"/>
+        <None Include="Assets\README.md" Pack="true" PackagePath="\" />
     </ItemGroup>
 
 </Project>
